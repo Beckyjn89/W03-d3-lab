@@ -36,11 +36,12 @@ album2.save
 album3.save
 # p artist1.albums
 # album3.delete
-# artist2.delete
+artist2.delete
 # album2.genre = 'classic rock'
 # album2.update
 
-Album.delete_by_artist(artist1)
+
+
 
 binding.pry
 nil
