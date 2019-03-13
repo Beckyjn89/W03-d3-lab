@@ -8,6 +8,9 @@ artist2 = Artist.new({'name' => 'The Beatles'})
 artist1.save
 artist2.save
 
+artist2.name = 'Paul, John, Ringo, George'
+artist2.update
+
 album1 = Album.new({
   'title' => 'A Night at the Opera',
   'genre' => 'rock',
@@ -29,6 +32,8 @@ album2.save
 album3.save
 # p artist1.albums
 
+album2.genre = 'classic rock'
+album2.update
 
 binding.pry
 nil
