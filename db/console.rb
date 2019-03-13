@@ -40,7 +40,7 @@ album3.save
 # album2.genre = 'classic rock'
 # album2.update
 
-Artist.find(23)
+Album.delete_by_artist(artist1)
 
 binding.pry
 nil
