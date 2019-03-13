@@ -17,4 +17,10 @@ attr_reader :id
     return @id = SqlRunner.run(sql, values).first['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM artists;"
+    artists_hash = SqlRunner.run(sql)
+    return artists_hash.map{ |artist| Artist.new(artist) }
+  end
+
 end

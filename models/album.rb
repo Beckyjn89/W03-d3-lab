@@ -19,4 +19,10 @@ attr_reader :id, :artist_id
     return @id = SqlRunner.run(sql, values).first['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM albums;"
+    albums_hash = SqlRunner.run(sql)
+    return albums_hash.map{ |album| Album.new(album) }
+  end
+
 end
