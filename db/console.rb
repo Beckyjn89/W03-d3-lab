@@ -35,12 +35,12 @@ album2.save
     })
 album3.save
 # p artist1.albums
-album3.delete
-artist2.delete
-album2.genre = 'classic rock'
-album2.update
+# album3.delete
+# artist2.delete
+# album2.genre = 'classic rock'
+# album2.update
 
-
+Artist.find(23)
 
 binding.pry
 nil

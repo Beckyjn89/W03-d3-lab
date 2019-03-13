@@ -49,4 +49,12 @@ attr_reader :id, :artist_id
     SqlRunner.run(sql, values)
   end
 
+
+  def self.find(given_id)
+    sql = "SELECT * FROM albums WHERE id = $1"
+    values = [given_id]
+    albums_hash = SqlRunner.run(sql, values)
+    return albums_hash.map{ |album| Album.new(album)}
+  end
+
 end
