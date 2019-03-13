@@ -4,16 +4,31 @@ require_relative('../models/artist.rb')
 # require_relative('./sql_runner.rb')
 
 artist1 = Artist.new({'name' => 'Queen'})
-# artist1.save
+artist2 = Artist.new({'name' => 'The Beatles'})
+artist1.save
+artist2.save
 
 album1 = Album.new({
   'title' => 'A Night at the Opera',
   'genre' => 'rock',
   'artist_id' => artist1.id
   })
+album1.save
+album2 = Album.new({
+  'title' => 'A Day at the Races',
+  'genre' => 'rock',
+  'artist_id' => artist1.id
+  })
+album2.save
 
-  # album1.save
-Album.all
+  album3 = Album.new({
+    'title' => 'Revolver',
+    'genre' => 'classic rock',
+    'artist_id' => artist2.id
+    })
+album3.save
+# p artist1.albums
+
 
 binding.pry
 nil
